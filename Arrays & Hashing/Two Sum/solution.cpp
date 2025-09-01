@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        map<int, int> sumMap;
+        unordered_map<int, int> sumMap;
         vector<int> solution;
 
         for(int i = 0; i < nums.size(); i++)
@@ -40,7 +40,7 @@ int main() {
 /* Algorithm Used
 The solution implements the Hash Map (Hash Table) approach for the Two Sum problem. Here's how it works:
 
-Initialize: Create a hash map (map<int, int> sumMap) to store numbers and their indices
+Initialize: Create a hash map (unordered_map<int, int> sumMap) to store numbers and their indices
 Iterate: For each element in the array:
 Calculate the complement: target - nums[i]
 Check if the complement exists in the hash map
